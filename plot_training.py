@@ -11,7 +11,7 @@ if not train and not valid:
     raise SystemExit('No loss values found in logs/train_history.json')
 plt.figure(figsize=(8, 4.5))
 if train:
-    plt.plot(*zip(*train), label='Training loss')
+    plt.plot(*zip(*train), marker='o', label='Training loss')
 if valid:
     plt.plot(*zip(*valid), marker='o', label='Validation loss')
 plt.xlabel('Training step')
